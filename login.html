@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" />
+
+    <title>Прототип интерфейса веб-портала</title>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>
+				Веб-портал (прототип)<br/>
+				<small>Вход в систему</small>
+			</h1>
+		</div>
+		<p>Введите имя пользователя и пароль</p>
+		
+		<form class="form-horizontal login-form" name="login-form">
+			<div class="form-group" id="login">
+				<label for="input-userLogin" class="col-sm-1 control-label">Логин</label>
+				<div class="col-sm-5">
+					<input name="username" type="text" class="form-control" id="input-userLogin" placeholder="Введите имя пользователя...">
+				</div>
+			</div>
+			<div class="form-group" id="password">
+				<label for="input-userPassword" class="col-sm-1 control-label">Пароль</label>
+				<div class="col-sm-5">
+					<input name="password" type="password" class="form-control" id="input-userPassword" placeholder="Введите пароль...">
+				</div>
+			</div>
+			<div class="form-group">	
+				<div class="col-sm-offset-1 col-sm-10">
+					<a href="dashboard.html" class="btn btn-primary">Войти</a>
+					<span class="help-block error"></span>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

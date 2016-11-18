@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <title>Прототип интерфейса веб-портала</title>
+</head>
+<body>
+
+  <!-- Top menu panel -->
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Панель навигации</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>    
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="">Личный кабинет</a>
+      </div> <!-- navbar-header -->
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html" >Выйти</a></li>
+          <li><a href="#"></a></li>
+        </ul>        
+      </div> <!-- navbar-collapse collapse -->
+    </div> <!-- container-fluid -->
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar menu -->
+      <div class="col-sm-3 col-md-2 sidebar" id="sidebarMenu">
+        <div class="nav nav-sidebar list-group">
+          <p class="list-group-item list-group-item-success">Отчёты</p>
+          <a href="#" class="list-group-item">Отчет №1</a>
+          <a href="#" class="list-group-item">Отчет №2</a>
+        </div>
+        <div class="nav nav-sidebar list-group">
+          <p class="list-group-item list-group-item-info">Документы</p>
+          <a href="devreg.html" class="list-group-item">Регистрация несоответствий</a>
+          <a href="actreg.html" class="list-group-item active">Регистрация акта</a>
+        </div>
+        <div class="nav nav-sidebar list-group">
+          <p class="list-group-item list-group-item-warning">Информация</p>
+          <a href="#" class="list-group-item">Новости</a>
+          <a href="#" class="list-group-item">Объявления</a>
+          <a href="#" class="list-group-item">Нормативная документация</a>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#header" role="tab" data-toggle="tab">Акт</a>
+          </li>
+          <li role="presentation">
+            <a href="#decision" role="tab" data-toggle="tab">Решение</a>
+          </li>
+          <li role="presentation">
+            <a href="#actions" role="tab" data-toggle="tab">Мероприятия</a>
+          </li>          
+        </ul>
+
+        <div class="tab-content">
+          <!-- Вкладка Акт -->
+          <div role="tabpanel" class="tab-pane active" id="header">
+            <br/>
+            <div class="form form-horizontal">
+              <!-- Номер документа -->
+              <div class="form-group">
+                <label class="control-label col-sm-4 col-md-2">Номер документа</label>
+                <div class="col-sm-5 col-md-3">
+                  <input type="text" class="form-control"></input>
+                </div>  
+              </div>
+              <!-- Название предприятия -->
+              <div class="form-group">
+                <label class="control-label col-sm-4 col-md-2">Предприятие-заявитель</label>
+                <div class="col-sm-5 col-md-3">
+                  <input type="text" class="form-control"></input>
+                </div>  
+              </div>
+              <!-- Дата и статус -->
+              <div class="form-group">
+                <label class="control-label col-sm-4 col-md-2">Дата регистрации</label>
+                <div class="col-sm-5 col-md-3">
+                  <input type="date" class="form-control"></input>
+                </div>
+                <label class="control-label col-sm-4 col-md-2">Статус задачи</label>
+                <div class="col-sm-5 col-md-3">
+                  <select class="form-control">
+                    <option selected>На рассмотрении</option>
+                    <option>Закрыта</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Несоответствующие ДСЕ</div>
+                  <div class="panel-body">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Наименование</th>
+                          <th>Обозначение</th>
+                          <th>Индивидуальный номер</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <button class="btn btn-primary">Добавить</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Описание и файлы -->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="panel panel-default" style="height:20vh;">
+                  <div class="panel-heading">Описание несоответствия</div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="panel panel-default" style="height:20vh;">
+                  <div class="panel-heading">Приложенные документы</div>
+                  <div class="panel-body panel-with-bottom">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Документ</th>
+                          <th>Файл</th>
+                          <th>Действия</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Фотография несооответствия</td>
+                          <td>img0001.jpg</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <button class="btn btn-primary">Добавить</button>
+                  </div>
+                </div>
+              </div>
+            </div>      
+            
+            <a href="dashboard.html" class="btn btn-primary">Создать</a>
+            <a href="dashboard.html" class="btn btn-default">Отмена</a>            
+
+          </div> <!-- Вкладка Акт -->                    
+          <!-- Вкладка Решения -->
+          <div role="tabpanel" class="tab-pane active" id="decision">
+
+          </div>
+          <!-- Вкладка Мероприятия -->
+          <div role="tabpanel" class="tab-pane active" id="actions">
+
+          </div>
+        </div> <!-- закладки -->
+      </div> 
+
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
